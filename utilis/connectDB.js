@@ -6,7 +6,7 @@ const client = new MongoClient("mongodb://localhost:27017", {
     deprecationErrors: true,
   },
 });
-let db = client.db("chatify");
+let db = client.db("kwickpay");
 const connectDB = async () => {
   try {
     await client.connect();
