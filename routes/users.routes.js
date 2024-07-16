@@ -1,12 +1,13 @@
 import express from "express";
-import {auth} from "../controllers/users/users.controlers.js";
+import { getuser, signinauth, signupauth } from "../controllers/users/users.controlers.js";
 
 const router = express.Router();
 
-router.put("/auth", auth);
+router.put("/auth", signupauth);
 
-router.get("/auth", auth);
+router.post("/auth", signinauth);
+router.get("/", getuser)
 
-const usersroute = router; 
+const usersroute = router;
 
 export default usersroute;
